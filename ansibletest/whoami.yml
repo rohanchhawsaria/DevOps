@@ -1,0 +1,8 @@
+---
+- name: Display currently logged in user
+  hosts: all
+  tasks:
+     - name: capture output of who am i
+       command: whoami
+       register: login
+     - debug: var=login

@@ -1,0 +1,47 @@
+---
+
+- name: This playbook will install nginx web server 
+  hosts: all
+  become: yes 
+  become_method: sudo
+
+  vars:
+   tool_name: good 
+   proxy_env:
+     http_proxy: http://10.19.16.165:8080
+
+#  environment:
+#      http_proxy: http://10.19.16.165:8080
+#
+  tasks:
+    - name: Install ngix web server on Ubuntu Box
+      apt: name="nginx" state="present" update_cache=yes force=yes
+      environment: "{{ proxy_env }}"
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+
+    - name: Install ngix web server on CentOS Box
+      command: yum install epel-release -y
+      environment: "{{ proxy_env }}"
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+    - name: Install ngix web server on CentOS Box 
+      yum: name="nginx" state="absent" 
+      environment: "{{ proxy_env }}"
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+    - name: Configure nginz web server 
+      copy: src=nginx.conf dest=/etc/nginx/nginx.conf 
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+
+    - name: Configure nginz web server 
+      copy: src=/home/train/ansibletest/centOS/centos-sshd-passwordless/centfile/nginx.conf dest=/etc/nginx/nginx.conf 
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+    - name: Deploy website on centOS 
+      template: src="index.html" dest="/usr/share/nginx/html/index.html"
+      notify:
+         - Restart nginx server
+ 
+  handlers:
+    - name: Restart nginx server
+      service: name=nginx status=restarted

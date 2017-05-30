@@ -1,0 +1,27 @@
+---
+
+- name: This playbook will install nginx web server 
+  hosts: all
+  become: yes 
+  become_method: sudo
+
+  vars:
+   proxy_env:
+     http_proxy: http://10.19.16.165:8080
+
+#  environment:
+#      http_proxy: http://10.19.16.165:8080
+#
+  tasks:
+    - name: Install ngix web server on Ubuntu Box
+      apt: name="nginx" state="present" update_cache=yes force=yes
+      environment: "{{ proxy_env }}"
+
+    - name: Configure nginz web server 
+      copy: src=nginx.conf dest=/etc/nginx/nginx.conf 
+      notify:
+          - "Restart"
+
+  handlers:
+    - name: Restart 
+      service: name=nginx status=stopped
