@@ -1,0 +1,7 @@
+---
+
+ - name: Configure nginx server
+   file: src=nginx.conf dest=/etc/nginx/nginx.conf state=file
+   
+   notify:
+    - Restart nginx 

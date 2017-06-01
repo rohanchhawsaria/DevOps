@@ -1,0 +1,18 @@
+---
+
+- name: This playbook help to learn Loops in ansible
+  hosts: all
+  
+  vars_files: 
+       - contacts
+  tasks:
+   - name: this task helps to learn with_items list
+     yum: name={{items}} state="present"
+     with_items:
+       - tree
+       - vim
+       - cscope
+   
+   - name: this task helps to learn dictonary
+     debug: msg= "{{item.value.name}} mobile is {{item.value.mobile}}"
+     with_dict: "{{contact_list}}"

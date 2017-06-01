@@ -1,0 +1,12 @@
+---
+
+- name: this playbook will help to understand ansible-vault
+  hosts: all
+  vars_files:
+    - credentials
+
+  tasks:
+   - name: this will show secret password
+     debug: msg= "{{item.value.name}}"s mobile is "{{item.value.mobile}}"
+     with_dict: "{{contact_list}}"
+

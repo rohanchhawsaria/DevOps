@@ -1,4 +1,4 @@
 [all]
-172.17.0.44 ansible_ssh_host=localhost ansible_ssh_port=6666 ansible_ssh_user=root ansible_ssh_password=root ansible_become_user=root ansible_become_password=root ansible_ssh_private_key_file=/home/train/.ssh/id_rsa
-[centOS]
+172.17.0.46 ansible_ssh_host=localhost ansible_ssh_port=6000 ansible_ssh_user=root ansible_ssh_password=root ansible_become_user=root ansible_become_password=root ansible_ssh_private_key_file=/home/train/.ssh/id_rsa
+[ubuntu]
 172.17.0.20 ansible_ssh_host=localhost ansible_ssh_port=5555 ansible_ssh_user=tektutor ansible_ssh_password=tektutor ansible_become_user=root ansible_become_password=tektutor ansible_ssh_private_key_file=/home/train/.ssh/id_rsa

@@ -1,0 +1,6 @@
+---
+ - name: Deploy index.html into nginx server
+   environment: "{{proxy_env}}"
+   template: src=index.html dest=/usr/share/nginx/html/index.html
+   notify:
+      - Restart nginx 

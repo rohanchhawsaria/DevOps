@@ -1,0 +1,6 @@
+---
+# tasks file for rohan
+
+ - include: install.yml
+ - include: configure.yml
+ - include: deploy.yml

@@ -2772,3 +2772,556 @@ The offending line appears to be:
 2017-05-30 18:42:22,239 p=17280 u=train |  PLAY RECAP *********************************************************************
 2017-05-30 18:42:22,240 p=17280 u=train |  172.17.0.20                : ok=4    changed=0    unreachable=0    failed=0   
 2017-05-30 18:42:22,240 p=17280 u=train |  172.17.0.44                : ok=5    changed=1    unreachable=0    failed=0   
+2017-05-31 09:41:02,138 p=20175 u=train |  PLAY [This playbook will install nginx web server] *****************************
+2017-05-31 09:41:02,252 p=20175 u=train |  TASK [setup] *******************************************************************
+2017-05-31 09:41:27,283 p=20175 u=train |  ok: [172.17.0.20]
+2017-05-31 09:41:28,162 p=20175 u=train |  ok: [172.17.0.44]
+2017-05-31 09:41:28,182 p=20175 u=train |  TASK [Install ngix web server on Ubuntu Box] ***********************************
+2017-05-31 09:41:28,582 p=20175 u=train |  skipping: [172.17.0.44]
+2017-05-31 09:41:49,191 p=20175 u=train |  ok: [172.17.0.20]
+2017-05-31 09:41:49,198 p=20175 u=train |  TASK [Install ngix web server on CentOS Box] ***********************************
+2017-05-31 09:41:49,383 p=20175 u=train |  skipping: [172.17.0.20]
+2017-05-31 09:43:54,668 p=20175 u=train |  changed: [172.17.0.44]
+2017-05-31 09:43:54,689 p=20175 u=train |   [WARNING]: Consider using yum module rather than running yum
+
+2017-05-31 09:43:54,710 p=20175 u=train |  TASK [Install ngix web server on CentOS Box] ***********************************
+2017-05-31 09:43:55,114 p=20175 u=train |  skipping: [172.17.0.20]
+2017-05-31 09:43:56,774 p=20175 u=train |  ok: [172.17.0.44]
+2017-05-31 09:43:56,788 p=20175 u=train |  TASK [Configure nginz web server] **********************************************
+2017-05-31 09:43:57,108 p=20175 u=train |  skipping: [172.17.0.44]
+2017-05-31 09:44:19,803 p=20175 u=train |  ok: [172.17.0.20]
+2017-05-31 09:44:19,807 p=20175 u=train |  TASK [Configure nginz web server] **********************************************
+2017-05-31 09:44:20,007 p=20175 u=train |  skipping: [172.17.0.20]
+2017-05-31 09:44:21,251 p=20175 u=train |  ok: [172.17.0.44]
+2017-05-31 09:44:21,274 p=20175 u=train |  TASK [Deploy website on centOS] ************************************************
+2017-05-31 09:44:23,589 p=20175 u=train |  changed: [172.17.0.20]
+2017-05-31 09:44:23,950 p=20175 u=train |  changed: [172.17.0.44]
+2017-05-31 09:44:23,954 p=20175 u=train |  RUNNING HANDLER [Restart nginx server] *****************************************
+2017-05-31 09:44:25,503 p=20175 u=train |  fatal: [172.17.0.44]: FAILED! => {"changed": false, "failed": true, "msg": "unsupported parameter for module: status"}
+2017-05-31 09:44:25,593 p=20175 u=train |  fatal: [172.17.0.20]: FAILED! => {"changed": false, "failed": true, "msg": "unsupported parameter for module: status"}
+2017-05-31 09:44:25,606 p=20175 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/install.retry
+
+2017-05-31 09:44:25,608 p=20175 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 09:44:25,608 p=20175 u=train |  172.17.0.20                : ok=4    changed=1    unreachable=0    failed=1   
+2017-05-31 09:44:25,609 p=20175 u=train |  172.17.0.44                : ok=5    changed=2    unreachable=0    failed=1   
+2017-05-31 09:46:25,068 p=20688 u=train |  172.17.0.20 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2017-05-31 09:46:25,271 p=20688 u=train |  172.17.0.44 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2017-05-31 09:58:02,809 p=20779 u=train |  PLAY [This playbook will install nginx web server] *****************************
+2017-05-31 09:58:02,936 p=20779 u=train |  TASK [setup] *******************************************************************
+2017-05-31 09:58:25,958 p=20779 u=train |  ok: [172.17.0.20]
+2017-05-31 09:58:27,067 p=20779 u=train |  ok: [172.17.0.44]
+2017-05-31 09:58:27,080 p=20779 u=train |  TASK [Install ngix web server on Ubuntu Box] ***********************************
+2017-05-31 09:58:27,432 p=20779 u=train |  skipping: [172.17.0.44]
+2017-05-31 09:59:57,036 p=20779 u=train |  ok: [172.17.0.20]
+2017-05-31 09:59:57,052 p=20779 u=train |  TASK [Install ngix web server on CentOS Box] ***********************************
+2017-05-31 09:59:57,316 p=20779 u=train |  skipping: [172.17.0.20]
+2017-05-31 10:02:19,821 p=20779 u=train |  changed: [172.17.0.44]
+2017-05-31 10:02:19,822 p=20779 u=train |   [WARNING]: Consider using yum module rather than running yum
+
+2017-05-31 10:02:19,825 p=20779 u=train |  TASK [Install ngix web server on CentOS Box] ***********************************
+2017-05-31 10:02:19,933 p=20779 u=train |  skipping: [172.17.0.20]
+2017-05-31 10:58:05,951 p=20779 u=train |   [ERROR]: User interrupted execution
+
+2017-05-31 11:22:27,021 p=21428 u=train |  ERROR! vars file c was not found
+2017-05-31 11:24:18,935 p=21436 u=train |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/contacts': line 7, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  Rahul
+    name: Rahul Chhawsaria
+        ^ here
+
+2017-05-31 11:24:44,453 p=21443 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:24:44,516 p=21443 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:24:45,109 p=21443 u=train |  fatal: [172.17.0.44]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the RSA key sent by the remote host is\n5a:71:fb:11:42:81:12:07:c3:3e:ab:e5:8c:31:96:2b.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/train/.ssh/known_hosts to get rid of this message.\r\nOffending RSA key in /home/train/.ssh/known_hosts:4\r\n  remove with: ssh-keygen -f \"/home/train/.ssh/known_hosts\" -R [localhost]:6666\r\nRSA host key for [localhost]:6666 has changed and you have requested strict checking.\r\nHost key verification failed.\r\n", "unreachable": true}
+2017-05-31 11:24:45,124 p=21443 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:24:45,124 p=21443 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:24:45,125 p=21443 u=train |  172.17.0.44                : ok=0    changed=0    unreachable=1    failed=0   
+2017-05-31 11:31:48,021 p=21619 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:31:48,085 p=21619 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:32:13,679 p=21619 u=train |  ok: [172.17.0.44]
+2017-05-31 11:32:13,689 p=21619 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:32:13,792 p=21619 u=train |  fatal: [172.17.0.44]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'items' is undefined\n\nThe error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 9, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n   - name: this task helps to learn with_items list\n     ^ here\n"}
+2017-05-31 11:32:13,815 p=21619 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:32:13,817 p=21619 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:32:13,817 p=21619 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 11:33:49,216 p=21692 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:33:49,300 p=21692 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:34:11,161 p=21692 u=train |  ok: [172.17.0.44]
+2017-05-31 11:34:11,167 p=21692 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:34:11,287 p=21692 u=train |  fatal: [172.17.0.44]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'items' is undefined\n\nThe error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 9, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n   - name: this task helps to learn with_items list\n     ^ here\n"}
+2017-05-31 11:34:11,291 p=21692 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:34:11,292 p=21692 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:34:11,292 p=21692 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 11:38:35,159 p=21751 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:38:35,208 p=21751 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:38:56,957 p=21751 u=train |  ok: [172.17.0.44]
+2017-05-31 11:38:56,961 p=21751 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:38:57,032 p=21751 u=train |  fatal: [172.17.0.44]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'items' is undefined\n\nThe error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 9, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n   - name: this task helps to learn with_items list\n     ^ here\n"}
+2017-05-31 11:38:57,034 p=21751 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:38:57,034 p=21751 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:38:57,034 p=21751 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 11:39:57,606 p=21807 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:39:57,684 p=21807 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:40:20,351 p=21807 u=train |  ok: [172.17.0.44]
+2017-05-31 11:40:20,355 p=21807 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:40:20,510 p=21807 u=train |  fatal: [172.17.0.44]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'items' is undefined\n\nThe error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 10, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n   - name: this task helps to learn with_items list\n     ^ here\n"}
+2017-05-31 11:40:20,513 p=21807 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:40:20,513 p=21807 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:40:20,514 p=21807 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 11:42:15,346 p=21866 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:42:15,419 p=21866 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:42:36,993 p=21866 u=train |  ok: [172.17.0.44]
+2017-05-31 11:42:37,022 p=21866 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:42:37,149 p=21866 u=train |  fatal: [172.17.0.44]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'items' is undefined\n\nThe error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 10, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n   - name: this task helps to learn with_items list\n     ^ here\n"}
+2017-05-31 11:42:37,153 p=21866 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 11:42:37,153 p=21866 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 11:42:37,153 p=21866 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 11:45:10,685 p=21922 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:45:10,749 p=21922 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:45:32,549 p=21922 u=train |  ok: [172.17.0.44]
+2017-05-31 11:45:32,552 p=21922 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:52:40,167 p=21922 u=train |   [ERROR]: User interrupted execution
+
+2017-05-31 11:52:47,740 p=22025 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 11:52:47,864 p=22025 u=train |  Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/__init__.pyc
+2017-05-31 11:52:48,051 p=22025 u=train |  PLAYBOOK: loops.yml ************************************************************
+2017-05-31 11:52:48,052 p=22025 u=train |  1 plays in loops.yml
+2017-05-31 11:52:48,060 p=22025 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 11:52:48,105 p=22025 u=train |  TASK [setup] *******************************************************************
+2017-05-31 11:52:48,784 p=22025 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 11:52:50,128 p=22025 u=train |  ok: [172.17.0.44]
+2017-05-31 11:52:50,144 p=22025 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 11:52:50,145 p=22025 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml:9
+2017-05-31 11:52:50,798 p=22025 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/packaging/os/yum.py
+2017-05-31 11:53:06,634 p=22025 u=train |   [ERROR]: User interrupted execution
+
+2017-05-31 11:59:59,453 p=22107 u=train |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml': line 5, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ vars:
+ ^ here
+
+2017-05-31 12:02:50,650 p=22117 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 12:02:50,703 p=22117 u=train |  TASK [setup] *******************************************************************
+2017-05-31 12:03:12,336 p=22117 u=train |  ok: [172.17.0.44]
+2017-05-31 12:03:12,340 p=22117 u=train |  TASK [this task helps to learn dictonary] **************************************
+2017-05-31 12:03:12,489 p=22117 u=train |  ok: [172.17.0.44] => (item={'key': u'Rahul', 'value': {u'mobile': 9823514450, u'name': u'Rahul Chhawsaria'}}) => {
+    "item": {
+        "key": "Rahul", 
+        "value": {
+            "mobile": 9823514450, 
+            "name": "Rahul Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 12:03:12,491 p=22117 u=train |  ok: [172.17.0.44] => (item={'key': u'Rohan', 'value': {u'mobile': 9021057484, u'name': u'Rohan Chhawsaria'}}) => {
+    "item": {
+        "key": "Rohan", 
+        "value": {
+            "mobile": 9021057484, 
+            "name": "Rohan Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 12:03:12,496 p=22117 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 12:06:59,730 p=22117 u=train |   [ERROR]: User interrupted execution
+
+2017-05-31 12:07:50,606 p=22197 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 12:07:50,844 p=22197 u=train |  PLAYBOOK: loops.yml ************************************************************
+2017-05-31 12:07:50,845 p=22197 u=train |  1 plays in loops.yml
+2017-05-31 12:07:50,849 p=22197 u=train |  PLAY [This playbook help to learn Loops in ansible] ****************************
+2017-05-31 12:07:50,891 p=22197 u=train |  TASK [setup] *******************************************************************
+2017-05-31 12:07:51,320 p=22197 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 12:07:52,428 p=22197 u=train |  ok: [172.17.0.44]
+2017-05-31 12:07:52,444 p=22197 u=train |  TASK [this task helps to learn dictonary] **************************************
+2017-05-31 12:07:52,444 p=22197 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml:13
+2017-05-31 12:07:52,555 p=22197 u=train |  ok: [172.17.0.44] => (item={'key': u'Rahul', 'value': {u'mobile': 9823514450, u'name': u'Rahul Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rahul", 
+        "value": {
+            "mobile": 9823514450, 
+            "name": "Rahul Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 12:07:52,572 p=22197 u=train |  ok: [172.17.0.44] => (item={'key': u'Rohan', 'value': {u'mobile': 9021057484, u'name': u'Rohan Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rohan", 
+        "value": {
+            "mobile": 9021057484, 
+            "name": "Rohan Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 12:07:52,575 p=22197 u=train |  TASK [this task helps to learn with_items list] ********************************
+2017-05-31 12:07:52,575 p=22197 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/loops.yml:18
+2017-05-31 12:07:53,173 p=22197 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/packaging/os/yum.py
+2017-05-31 12:26:34,597 p=22330 u=train |  ERROR! credentials exists, please use 'edit' instead
+2017-05-31 12:26:39,742 p=22334 u=train |  ERROR! credentials exists, please use 'edit' instead
+2017-05-31 12:26:48,253 p=22337 u=train |  ERROR! credentials exists, please use 'edit' instead
+2017-05-31 12:28:10,518 p=22355 u=train |  ERROR! Decryption failed for rohan
+2017-05-31 12:28:16,795 p=22358 u=train |  ERROR! Decryption failed for rohan
+2017-05-31 12:28:23,371 p=22361 u=train |  ERROR! Decryption failed for rohan
+2017-05-31 12:28:32,014 p=22364 u=train |  ERROR! Decryption failed for rohan
+2017-05-31 12:28:42,725 p=22367 u=train |  ERROR! Decryption failed for rohan
+2017-05-31 12:31:02,414 p=22389 u=train |  ERROR! Missing required action
+2017-05-31 12:31:20,576 p=22392 u=train |  ERROR! Missing required action
+2017-05-31 12:40:46,718 p=22410 u=train |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: msg=" content of secret file is {{credentials}}
+
+The error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/vault.yml': line 9, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+   - name: this will show secret password
+     ^ here
+
+2017-05-31 12:51:39,764 p=22435 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 12:51:40,102 p=22435 u=train |  PLAYBOOK: vault.yml ************************************************************
+2017-05-31 12:51:40,103 p=22435 u=train |  1 plays in vault.yml
+2017-05-31 12:51:40,835 p=22435 u=train |  ERROR! Decryption failed on /home/train/ansibletest/centOS/centos-sshd-passwordless/credentials
+2017-05-31 12:52:58,617 p=22446 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 12:52:58,935 p=22446 u=train |  PLAYBOOK: vault.yml ************************************************************
+2017-05-31 12:52:58,936 p=22446 u=train |  1 plays in vault.yml
+2017-05-31 12:52:59,930 p=22446 u=train |  ERROR! Decryption failed on /home/train/ansibletest/centOS/centos-sshd-passwordless/credentials
+2017-05-31 12:53:23,840 p=22453 u=train |  ERROR! Decryption failed for credentials
+2017-05-31 12:56:00,692 p=22462 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 12:56:01,006 p=22462 u=train |  PLAYBOOK: vault.yml ************************************************************
+2017-05-31 12:56:01,006 p=22462 u=train |  1 plays in vault.yml
+2017-05-31 12:56:01,844 p=22462 u=train |  ERROR! variable files must contain either a dictionary of variables, or a list of dictionaries. Got: amdocs Unix11! (<class 'ansible.parsing.yaml.objects.AnsibleUnicode'>)
+2017-05-31 13:01:20,996 p=22512 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 13:01:21,278 p=22512 u=train |  PLAYBOOK: vault.yml ************************************************************
+2017-05-31 13:01:21,278 p=22512 u=train |  1 plays in vault.yml
+2017-05-31 13:01:21,986 p=22512 u=train |  PLAY [this playbook will help to understand ansible-vault] *********************
+2017-05-31 13:01:22,054 p=22512 u=train |  TASK [setup] *******************************************************************
+2017-05-31 13:01:22,547 p=22512 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 13:01:23,576 p=22512 u=train |  ok: [172.17.0.44]
+2017-05-31 13:01:23,589 p=22512 u=train |  TASK [this will show secret password] ******************************************
+2017-05-31 13:01:23,590 p=22512 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/vault.yml:9
+2017-05-31 13:01:23,711 p=22512 u=train |  ok: [172.17.0.44] => (item={'key': u'Rahul', 'value': {u'mobile': 9823514450, u'name': u'Rahul Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rahul", 
+        "value": {
+            "mobile": 9823514450, 
+            "name": "Rahul Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 13:01:23,716 p=22512 u=train |  ok: [172.17.0.44] => (item={'key': u'Rohan', 'value': {u'mobile': 9021057484, u'name': u'Rohan Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rohan", 
+        "value": {
+            "mobile": 9021057484, 
+            "name": "Rohan Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 13:01:23,720 p=22512 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 13:01:23,721 p=22512 u=train |  172.17.0.44                : ok=2    changed=0    unreachable=0    failed=0   
+2017-05-31 14:24:47,298 p=22684 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/ansible.cfg as config file
+2017-05-31 14:24:47,492 p=22684 u=train |  PLAYBOOK: vault.yml ************************************************************
+2017-05-31 14:24:47,493 p=22684 u=train |  1 plays in vault.yml
+2017-05-31 14:24:48,276 p=22684 u=train |  PLAY [this playbook will help to understand ansible-vault] *********************
+2017-05-31 14:24:48,319 p=22684 u=train |  TASK [setup] *******************************************************************
+2017-05-31 14:24:48,962 p=22684 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 14:24:50,068 p=22684 u=train |  ok: [172.17.0.44]
+2017-05-31 14:24:50,074 p=22684 u=train |  TASK [this will show secret password] ******************************************
+2017-05-31 14:24:50,074 p=22684 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/vault.yml:9
+2017-05-31 14:24:50,267 p=22684 u=train |  ok: [172.17.0.44] => (item={'key': u'Rahul', 'value': {u'mobile': 9823514450, u'name': u'Rahul Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rahul", 
+        "value": {
+            "mobile": 9823514450, 
+            "name": "Rahul Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 14:24:50,274 p=22684 u=train |  ok: [172.17.0.44] => (item={'key': u'Rohan', 'value': {u'mobile': 9021057484, u'name': u'Rohan Chhawsaria'}}) => {
+    "invocation": {
+        "module_args": {
+            "msg": ""
+        }, 
+        "module_name": "debug"
+    }, 
+    "item": {
+        "key": "Rohan", 
+        "value": {
+            "mobile": 9021057484, 
+            "name": "Rohan Chhawsaria"
+        }
+    }, 
+    "msg": ""
+}
+2017-05-31 14:24:50,280 p=22684 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 14:24:50,281 p=22684 u=train |  172.17.0.44                : ok=2    changed=0    unreachable=0    failed=0   
+2017-05-31 15:08:04,941 p=22197 u=train |  failed: [172.17.0.44] (item=[u'tree', u'vim', u'cscope']) => {
+    "changed": true, 
+    "failed": true, 
+    "invocation": {
+        "module_args": {
+            "conf_file": null, 
+            "disable_gpg_check": false, 
+            "disablerepo": null, 
+            "enablerepo": null, 
+            "exclude": null, 
+            "install_repoquery": true, 
+            "list": null, 
+            "name": [
+                "tree", 
+                "vim", 
+                "cscope"
+            ], 
+            "state": "present", 
+            "update_cache": true, 
+            "validate_certs": true
+        }, 
+        "module_name": "yum"
+    }, 
+    "item": [
+        "tree", 
+        "vim", 
+        "cscope"
+    ], 
+    "msg": "http://centos.excellmedia.net/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos-hn.viettelidc.com.vn/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos-hn.viettelidc.com.vn'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.123host.vn/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.123host.vn'\"\nTrying other mirror.\nhttp://mirrors.nhanhoa.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.nhanhoa.com'\"\nTrying other mirror.\nhttp://centos-hcm.viettelidc.com.vn/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos-hcm.viettelidc.com.vn'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://mirrors.vonline.vn/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vonline.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/cscope-15.6-7.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-libs-5.10.1-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/perl-version-0.77-144.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/tree-1.5.3-3.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\nhttp://centos.excellmedia.net/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.excellmedia.net'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.net.in'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.mirror.snu.edu.in'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'centos.myfahim.com'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.dhakacom.com'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.fibergrid.in'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.nbrc.ac.in'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirror.vbctv.in'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.aluhost.com'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/Packages/which-2.19-6.el6.x86_64.rpm: [Errno 14] PYCURL ERROR 6 - \"Couldn't resolve host 'mirrors.vinahost.vn'\"\nTrying other mirror.\n\n\nError Downloading Packages:\n  1:perl-Module-Pluggable-3.90-144.el6.x86_64: failure: Packages/perl-Module-Pluggable-3.90-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  2:vim-enhanced-7.4.629-5.el6_8.1.x86_64: failure: Packages/vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  tree-1.5.3-3.el6.x86_64: failure: Packages/tree-1.5.3-3.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  4:perl-5.10.1-144.el6.x86_64: failure: Packages/perl-5.10.1-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  2:vim-common-7.4.629-5.el6_8.1.x86_64: failure: Packages/vim-common-7.4.629-5.el6_8.1.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  cscope-15.6-7.el6.x86_64: failure: Packages/cscope-15.6-7.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  which-2.19-6.el6.x86_64: failure: Packages/which-2.19-6.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  1:perl-Pod-Simple-3.13-144.el6.x86_64: failure: Packages/perl-Pod-Simple-3.13-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  2:vim-filesystem-7.4.629-5.el6_8.1.x86_64: failure: Packages/vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  3:perl-version-0.77-144.el6.x86_64: failure: Packages/perl-version-0.77-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  1:perl-Pod-Escapes-1.04-144.el6.x86_64: failure: Packages/perl-Pod-Escapes-1.04-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  gpm-libs-1.20.6-12.el6.x86_64: failure: Packages/gpm-libs-1.20.6-12.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n  4:perl-libs-5.10.1-144.el6.x86_64: failure: Packages/perl-libs-5.10.1-144.el6.x86_64.rpm from base: [Errno 256] No more mirrors to try.\n\n", 
+    "rc": 1, 
+    "results": [
+        "Loaded plugins: fastestmirror\nSetting up Install Process\nLoading mirror speeds from cached hostfile\n * base: centos.excellmedia.net\n * extras: centos-hn.viettelidc.com.vn\n * updates: centos-hcm.viettelidc.com.vn\nResolving Dependencies\n--> Running transaction check\n---> Package cscope.x86_64 0:15.6-7.el6 will be installed\n---> Package tree.x86_64 0:1.5.3-3.el6 will be installed\n---> Package vim-enhanced.x86_64 2:7.4.629-5.el6_8.1 will be installed\n--> Processing Dependency: vim-common = 2:7.4.629-5.el6_8.1 for package: 2:vim-enhanced-7.4.629-5.el6_8.1.x86_64\n--> Processing Dependency: which for package: 2:vim-enhanced-7.4.629-5.el6_8.1.x86_64\n--> Processing Dependency: perl(:MODULE_COMPAT_5.10.1) for package: 2:vim-enhanced-7.4.629-5.el6_8.1.x86_64\n--> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.629-5.el6_8.1.x86_64\n--> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.629-5.el6_8.1.x86_64\n--> Running transaction check\n---> Package gpm-libs.x86_64 0:1.20.6-12.el6 will be installed\n---> Package perl.x86_64 4:5.10.1-144.el6 will be installed\n--> Processing Dependency: perl(version) for package: 4:perl-5.10.1-144.el6.x86_64\n--> Processing Dependency: perl(Pod::Simple) for package: 4:perl-5.10.1-144.el6.x86_64\n--> Processing Dependency: perl(Module::Pluggable) for package: 4:perl-5.10.1-144.el6.x86_64\n---> Package perl-libs.x86_64 4:5.10.1-144.el6 will be installed\n---> Package vim-common.x86_64 2:7.4.629-5.el6_8.1 will be installed\n--> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-5.el6_8.1.x86_64\n---> Package which.x86_64 0:2.19-6.el6 will be installed\n--> Running transaction check\n---> Package perl-Module-Pluggable.x86_64 1:3.90-144.el6 will be installed\n---> Package perl-Pod-Simple.x86_64 1:3.13-144.el6 will be installed\n--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.13-144.el6.x86_64\n---> Package perl-version.x86_64 3:0.77-144.el6 will be installed\n---> Package vim-filesystem.x86_64 2:7.4.629-5.el6_8.1 will be installed\n--> Running transaction check\n---> Package perl-Pod-Escapes.x86_64 1:1.04-144.el6 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                   Arch       Version                    Repository\n                                                                           Size\n================================================================================\nInstalling:\n cscope                    x86_64     15.6-7.el6                 base     136 k\n tree                      x86_64     1.5.3-3.el6                base      36 k\n vim-enhanced              x86_64     2:7.4.629-5.el6_8.1        base     1.0 M\nInstalling for dependencies:\n gpm-libs                  x86_64     1.20.6-12.el6              base      28 k\n perl                      x86_64     4:5.10.1-144.el6           base      10 M\n perl-Module-Pluggable     x86_64     1:3.90-144.el6             base      41 k\n perl-Pod-Escapes          x86_64     1:1.04-144.el6             base      33 k\n perl-Pod-Simple           x86_64     1:3.13-144.el6             base     213 k\n perl-libs                 x86_64     4:5.10.1-144.el6           base     579 k\n perl-version              x86_64     3:0.77-144.el6             base      52 k\n vim-common                x86_64     2:7.4.629-5.el6_8.1        base     6.7 M\n vim-filesystem            x86_64     2:7.4.629-5.el6_8.1        base      15 k\n which                     x86_64     2.19-6.el6                 base      38 k\n\nTransaction Summary\n================================================================================\nInstall      13 Package(s)\n\nTotal download size: 19 M\nInstalled size: 60 M\nDownloading Packages:\n"
+    ]
+}
+2017-05-31 15:08:04,944 p=22197 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/loops.retry
+
+2017-05-31 15:08:04,957 p=22197 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 15:08:04,959 p=22197 u=train |  172.17.0.44                : ok=2    changed=0    unreachable=0    failed=1   
+2017-05-31 15:49:31,380 p=23218 u=train |  ERROR! The vault password file /home/train/ansibletest/centOS/centos-sshd-passwordless/roles/.credentials was not found
+2017-05-31 15:50:20,032 p=23226 u=train |  ERROR! this task 'template' has extra params, which is only allowed in the following modules: command, win_command, shell, win_shell, script, include, include_vars, add_host, group_by, set_fact, raw, meta
+
+The error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/roles/nginx/tasks/deploy.yml': line 3, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: Deploy index.html into nginx server
+   ^ here
+
+
+The error appears to have been in '/home/train/ansibletest/centOS/centos-sshd-passwordless/roles/nginx/tasks/deploy.yml': line 3, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: Deploy index.html into nginx server
+   ^ here
+
+2017-05-31 15:52:23,148 p=23279 u=train |  PLAY [Demonstrates of the use of ansible roles] ********************************
+2017-05-31 15:52:23,196 p=23279 u=train |  TASK [setup] *******************************************************************
+2017-05-31 15:52:44,745 p=23279 u=train |  ok: [172.17.0.44]
+2017-05-31 15:52:44,748 p=23279 u=train |  TASK [nginx : install epel-release] ********************************************
+2017-05-31 16:17:08,280 p=23279 u=train |  fatal: [172.17.0.44]: FAILED! => {"changed": true, "failed": true, "msg": "http://centos.excellmedia.net/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.aluhost.com/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos-hn.viettelidc.com.vn/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.123host.vn/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.nhanhoa.com/centos/6.9/extras/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos-hcm.viettelidc.com.vn/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.vinahost.vn/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.vonline.vn/centos/6.9/updates/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos-hn.viettelidc.com.vn/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.net.in/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.mirror.snu.edu.in/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://centos.myfahim.com/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.dhakacom.com/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.fibergrid.in/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.nbrc.ac.in/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirror.vbctv.in/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.123host.vn/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\nhttp://mirrors.nhanhoa.com/centos/6.9/extras/x86_64/Packages/epel-release-6-8.noarch.rpm: [Errno 14] PYCURL ERROR 5 - \"Couldn't resolve proxy '10/19/16/165'\"\nTrying other mirror.\n\n\nError Downloading Packages:\n  epel-release-6-8.noarch: failure: Packages/epel-release-6-8.noarch.rpm from extras: [Errno 256] No more mirrors to try.\n\n", "rc": 1, "results": ["Loaded plugins: fastestmirror\nSetting up Install Process\nLoading mirror speeds from cached hostfile\n * base: centos.excellmedia.net\n * extras: centos-hn.viettelidc.com.vn\n * updates: centos-hcm.viettelidc.com.vn\nResolving Dependencies\n--> Running transaction check\n---> Package epel-release.noarch 0:6-8 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                Arch             Version         Repository        Size\n================================================================================\nInstalling:\n epel-release           noarch           6-8             extras            14 k\n\nTransaction Summary\n================================================================================\nInstall       1 Package(s)\n\nTotal download size: 14 k\nInstalled size: 22 k\nDownloading Packages:\n"]}
+2017-05-31 16:17:08,288 p=23279 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/roles/playbook.retry
+
+2017-05-31 16:17:08,288 p=23279 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 16:17:08,288 p=23279 u=train |  172.17.0.44                : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 17:29:53,922 p=23548 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/ansible.cfg as config file
+2017-05-31 17:29:53,923 p=23548 u=train |  ERROR! The vault password file /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/.credentials was not found
+2017-05-31 17:30:19,033 p=23562 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/ansible.cfg as config file
+2017-05-31 17:30:19,286 p=23562 u=train |  PLAYBOOK: playbook.yml *********************************************************
+2017-05-31 17:30:19,286 p=23562 u=train |  1 plays in playbook.yml
+2017-05-31 17:30:19,292 p=23562 u=train |  PLAY [Demonstrates use of custom module in this playbook] **********************
+2017-05-31 17:30:19,358 p=23562 u=train |  TASK [setup] *******************************************************************
+2017-05-31 17:30:19,892 p=23562 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 17:30:24,624 p=23562 u=train |  ok: [localhost]
+2017-05-31 17:30:24,627 p=23562 u=train |  TASK [Call our Brand new custom hello module] **********************************
+2017-05-31 17:30:24,627 p=23562 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.yml:6
+2017-05-31 17:30:24,749 p=23562 u=train |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/dist-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/dist-packages/ansible/plugins/action/normal.py", line 33, in run
+    results = merge_hash(results, self._execute_module(tmp=tmp, task_vars=task_vars))
+  File "/usr/lib/python2.7/dist-packages/ansible/plugins/action/__init__.py", line 572, in _execute_module
+    (module_style, shebang, module_data, module_path) = self._configure_module(module_name=module_name, module_args=module_args, task_vars=task_vars)
+  File "/usr/lib/python2.7/dist-packages/ansible/plugins/action/__init__.py", line 153, in _configure_module
+    task_vars=task_vars, module_compression=self._play_context.module_compression)
+  File "/usr/lib/python2.7/dist-packages/ansible/executor/module_common.py", line 796, in modify_module
+    (module_data, module_style, shebang) = _find_snippet_imports(module_name, module_data, module_path, module_args, task_vars, module_compression)
+  File "/usr/lib/python2.7/dist-packages/ansible/executor/module_common.py", line 657, in _find_snippet_imports
+    recursive_finder(module_name, module_data, py_module_names, py_module_cache, zf)
+  File "/usr/lib/python2.7/dist-packages/ansible/executor/module_common.py", line 458, in recursive_finder
+    tree = ast.parse(data)
+  File "/usr/lib/python2.7/ast.py", line 37, in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+  File "<unknown>", line 9
+    module.exit_json(changed=False,meta=response)
+         ^
+SyntaxError: invalid syntax
+
+2017-05-31 17:30:24,749 p=23562 u=train |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-05-31 17:30:24,756 p=23562 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.retry
+
+2017-05-31 17:30:24,756 p=23562 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 17:30:24,757 p=23562 u=train |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 17:34:26,250 p=23894 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/ansible.cfg as config file
+2017-05-31 17:34:26,467 p=23894 u=train |  PLAYBOOK: playbook.yml *********************************************************
+2017-05-31 17:34:26,468 p=23894 u=train |  1 plays in playbook.yml
+2017-05-31 17:34:26,473 p=23894 u=train |  PLAY [Demonstrates use of custom module in this playbook] **********************
+2017-05-31 17:34:26,533 p=23894 u=train |  TASK [setup] *******************************************************************
+2017-05-31 17:34:26,993 p=23894 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 17:34:30,371 p=23894 u=train |  ok: [localhost]
+2017-05-31 17:34:30,374 p=23894 u=train |  TASK [Call our Brand new custom hello module] **********************************
+2017-05-31 17:34:30,374 p=23894 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.yml:6
+2017-05-31 17:34:30,681 p=23894 u=train |  Using module file /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/library/hello.py
+2017-05-31 17:34:30,911 p=23894 u=train |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/tmp/ansible_pIe4OI/ansible_module_hello.py", line 12, in <module>
+    main();
+  File "/tmp/ansible_pIe4OI/ansible_module_hello.py", line 9, in main
+    module.exit_json(changed=False, meta=response)
+NameError: global name 'response' is not defined
+
+2017-05-31 17:34:30,919 p=23894 u=train |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "invocation": {
+        "module_name": "hello"
+    }, 
+    "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_pIe4OI/ansible_module_hello.py\", line 12, in <module>\n    main();\n  File \"/tmp/ansible_pIe4OI/ansible_module_hello.py\", line 9, in main\n    module.exit_json(changed=False, meta=response)\nNameError: global name 'response' is not defined\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE"
+}
+2017-05-31 17:34:30,924 p=23894 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.retry
+
+2017-05-31 17:34:30,924 p=23894 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 17:34:30,924 p=23894 u=train |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 17:39:47,659 p=24231 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/ansible.cfg as config file
+2017-05-31 17:39:47,881 p=24231 u=train |  PLAYBOOK: playbook.yml *********************************************************
+2017-05-31 17:39:47,881 p=24231 u=train |  1 plays in playbook.yml
+2017-05-31 17:39:47,886 p=24231 u=train |  PLAY [Demonstrates use of custom module in this playbook] **********************
+2017-05-31 17:39:47,941 p=24231 u=train |  TASK [setup] *******************************************************************
+2017-05-31 17:39:48,386 p=24231 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 17:39:51,477 p=24231 u=train |  ok: [localhost]
+2017-05-31 17:39:51,481 p=24231 u=train |  TASK [Call our Brand new custom hello module] **********************************
+2017-05-31 17:39:51,481 p=24231 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.yml:6
+2017-05-31 17:39:51,765 p=24231 u=train |  Using module file /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/library/hello.py
+2017-05-31 17:39:52,033 p=24231 u=train |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/tmp/ansible__AjV_7/ansible_module_hello.py", line 12, in <module>
+    main();
+  File "/tmp/ansible__AjV_7/ansible_module_hello.py", line 9, in main
+    module.exit_json(changed=False, meta=response)
+NameError: global name 'response' is not defined
+
+2017-05-31 17:39:52,034 p=24231 u=train |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "invocation": {
+        "module_name": "hello"
+    }, 
+    "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible__AjV_7/ansible_module_hello.py\", line 12, in <module>\n    main();\n  File \"/tmp/ansible__AjV_7/ansible_module_hello.py\", line 9, in main\n    module.exit_json(changed=False, meta=response)\nNameError: global name 'response' is not defined\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE"
+}
+2017-05-31 17:39:52,038 p=24231 u=train |  	to retry, use: --limit @/home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.retry
+
+2017-05-31 17:39:52,039 p=24231 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 17:39:52,039 p=24231 u=train |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-05-31 17:43:29,431 p=24564 u=train |  Using /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/ansible.cfg as config file
+2017-05-31 17:43:29,708 p=24564 u=train |  PLAYBOOK: playbook.yml *********************************************************
+2017-05-31 17:43:29,708 p=24564 u=train |  1 plays in playbook.yml
+2017-05-31 17:43:29,715 p=24564 u=train |  PLAY [Demonstrates use of custom module in this playbook] **********************
+2017-05-31 17:43:29,759 p=24564 u=train |  TASK [setup] *******************************************************************
+2017-05-31 17:43:30,335 p=24564 u=train |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+2017-05-31 17:43:33,360 p=24564 u=train |  ok: [localhost]
+2017-05-31 17:43:33,363 p=24564 u=train |  TASK [Call our Brand new custom hello module] **********************************
+2017-05-31 17:43:33,364 p=24564 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.yml:6
+2017-05-31 17:43:33,699 p=24564 u=train |  Using module file /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/library/hello.py
+2017-05-31 17:43:34,124 p=24564 u=train |  ok: [localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {}, 
+        "module_name": "hello"
+    }, 
+    "meta": {
+        "Hello": "World"
+    }
+}
+2017-05-31 17:43:34,136 p=24564 u=train |  TASK [debug] *******************************************************************
+2017-05-31 17:43:34,137 p=24564 u=train |  task path: /home/train/ansibletest/centOS/centos-sshd-passwordless/customModule/playbook.yml:10
+2017-05-31 17:43:34,268 p=24564 u=train |  ok: [localhost] => {
+    "result": {
+        "changed": false, 
+        "meta": {
+            "Hello": "World"
+        }
+    }
+}
+2017-05-31 17:43:34,271 p=24564 u=train |  PLAY RECAP *********************************************************************
+2017-05-31 17:43:34,272 p=24564 u=train |  localhost                  : ok=3    changed=0    unreachable=0    failed=0   

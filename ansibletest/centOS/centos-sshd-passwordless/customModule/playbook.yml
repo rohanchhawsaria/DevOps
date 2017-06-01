@@ -1,0 +1,10 @@
+---
+
+- name: Demonstrates use of custom module in this playbook
+  hosts: localhost
+  tasks:
+    - name: Call our Brand new custom hello module
+      
+      hello:
+      register: result
+    - debug: var=result
